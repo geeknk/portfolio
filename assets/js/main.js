@@ -226,4 +226,30 @@
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
+
+  function hailstone(n) {
+    // Array to store the hailstone sequence
+    let sequence = [n];
+  
+    // Continue until n becomes 1
+    while (n !== 1) {
+      if (n % 2 === 0) {
+        // If n is even, divide it by 2
+        n = n / 2;
+      } else {
+        // If n is odd, multiply it by 3 and add 1
+        n = 3 * n + 1;
+      }
+      sequence.push(n); // Add the new number to the sequence
+    }
+  
+    return sequence;
+  }
+  
+  // Example usage
+  const number = document.getElementById("#number").value;
+  const sequence = hailstone(number);
+  console.log(`Hailstone sequence for ${number}:`, sequence);
+  
+
 })();
