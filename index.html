@@ -384,7 +384,12 @@
 
                   <button type="submit">Send Message</button>
                 </div>
-
+              <script>
+                const form = document.querySelector('.php-email-form');
+                form.addEventListener('submit', () => {
+                  sessionStorage.setItem('formSubmitted', 'true');
+                });
+              </script>
               </div>
             </form>
           </div><!-- End Contact Form -->
